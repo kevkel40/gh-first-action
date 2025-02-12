@@ -1,10 +1,10 @@
 name: first workflow
-on: workflow_dispatch # maunal start workflow
+on: workflow_dispatch
 jobs:
   first-job:
     runs-on: windows-latest
     steps:
       - name: Print greeting
-         run: echo "hello world"
-      -name: Print goodbye
+        run: echo "hello world"
+      - name: Print goodbye
         run: echo "done - bye!"
