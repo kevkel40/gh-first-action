@@ -8,3 +8,11 @@ jobs:
         run: echo "hello world"
       - name: Print goodbye
         run: echo "done - bye!"
+  build:
+   needs: first-job
+   runs-on: windows-latest
+   steps:
+    - name: Print greeting 
+      run: echo "your the man"
+    - name: Print goodbye
+      run: echo "adidos"
