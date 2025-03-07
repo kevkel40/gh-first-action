@@ -1,0 +1,20 @@
+name: first workflow
+on: [push, workflow_dispatch]
+# schedule:
+#   - cron: '0 0 * * 1-5'
+jobs:
+  first-job:
+    runs-on: windows-latest
+    steps:
+      - name: Print greeting
+        run: echo "hello world"
+      - name: Print goodbye
+        run: echo "done - bye!"
+  build:
+   needs: first-job
+   runs-on: windows-latest
+   steps:
+    - name: Print greeting 
+      run: echo "your the man"
+    - name: Print goodbye
+      run: echo "adidos"
