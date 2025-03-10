@@ -7,17 +7,27 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: npm Install
+        run: npm ci
       - name: Test code
         run: npm run Test
   test:
-  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
         run: npm Install
+      - name: build code
+        run: npm run build
+      - name: Deploy code
+        run: echo "Deploying ...."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
       - name: build code
         run: npm run build
       - name: Deploy code
