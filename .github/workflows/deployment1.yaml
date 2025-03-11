@@ -9,7 +9,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lint
-        run: npm run Lint
+        run: npm run "Lint"
       - name: Test code
         run: npm run Test
       - name: build code
